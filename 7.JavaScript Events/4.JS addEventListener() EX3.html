@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <style>
+            div {
+                background-color: lightcoral;
+                border: 2px solid lightblue;
+                font-size: 25px;
+                text-align: center;
+            }
+
+            span {
+                border: 2px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+        In this example, there are two div elements. We can see the bubbling effect on the first div element and the capturing effect on the second div element.
+
+        When we double click the span element of the first div element, then the span element's event is handled first than the div element. It is called bubbling.
+
+        But when we double click the span element of the second div element, then the div element's event is handled first than the span element. It is called capturing.
+        -->
+        <h1> Bubbling </h1>
+        <div id="div1">
+            This is Div element
+            <br> <br>
+            <span id="span1"> This is Span element</span>
+        </div>
+
+        <h1> Capturing </h1>
+        <div id="div2">
+            This is Div element
+            <br> <br>
+            <span id="span2"> This is Span element</span>
+        </div>
+
+        <script>
+            document.getElementById("div1").addEventListener("dblclick", function() {alert('You have double clicked on div element')}, false);
+            document.getElementById("span1").addEventListener("dblclick", function() {alert('You have double clicked on Span element')}, false);
+            document.getElementById("div2").addEventListener("dblclick", function() {alert('You have double clicked on div element')}, true);
+            document.getElementById("span2").addEventListener("dblclick", function() {alert('You have double clicked on div element')}, true);
+        </script>
+    </body>
+</html>

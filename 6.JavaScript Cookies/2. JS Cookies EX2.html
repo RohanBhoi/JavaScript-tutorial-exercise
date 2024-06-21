@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <!--
+            In this example, we provide choices of color and pass the selected color value to the cookie. 
+            Now, cookie stores the last choice of a user in a browser. 
+            So, on reloading the web page, the user's last choice will be shown on the screen.        
+        --> 
+        <select id="color" onchange="display()">
+            <option value="select Color"> Select color </option>
+            <option value="yellow"> Yellow </option>
+            <option value="red"> Red </option>
+            <option value="green"> Green </option>
+        </select>
+
+        <script type="text/javascript">
+            function display() {
+                var value = document.getElementById("color").value;
+                if(value != "select color") {
+                    document.bgColor = value;
+                    document.cookie = "color=" + value;
+                } 
+            }
+
+            window.onload = function(){
+                if(document.cookie.length != 0){
+                    var array = document.cookie.split("=");
+                    document.getElementById("color").value = array[1];
+                    document.bgColor = array[1];
+                }
+            }
+        </script>
+    </body>
+</html>

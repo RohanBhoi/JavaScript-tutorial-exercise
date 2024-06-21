@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <script>  
+            class Student {  
+                
+                constructor() {  
+                    var name;
+                    var marks;
+                } 
+
+                getName() {  
+                    return this.name; 
+                }  
+
+                setName(name) {  
+                    this.name = name;  
+                }  
+
+                getMarks() {  
+                    return this.marks; 
+                }  
+
+                setMarks(marks) {  
+                    if(marks<0 ||marks>100){
+                        alert("Invalid Marks");
+                    } else {
+                        this.marks = marks;
+                    }
+                     
+                }  
+            }  
+
+            var student1 = new Student();
+            student1.setName("Jay");
+            //student1.setMarks(110); //alert() invokes
+            student1.setMarks(87);
+
+            document.writeln(student1.getName()+" "+student1.getMarks())
+        </script>  
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+
+    <script>
+        function fun() {
+
+            function closure(val) // the innerfun() is the inner function, or a closure  
+            {
+                return function () {
+                    return val;
+                }
+            }
+
+            var a = [];
+            var i;
+            for (let i = 0; i < 5; i++) {
+                a[i] = closure(i);
+            }
+            return a;
+        }
+
+        var output = fun();
+        document.write(output[0]());
+        document.write(" ");
+        document.write(output[1]());
+        document.write(" ");
+        document.write(output[2]());
+        document.write(" ");
+        document.write(output[3]());
+        document.write(" ");
+        document.write(output[4]()); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <script>  
+            class Test {  
+                //example to invoke a static method within the constructor.
+                constructor() {  
+                    document.writeln(Test.display1()+"<br>");   
+                    document.writeln(this.constructor.display1()+ " in constructor"+"<br>");   
+                } 
+
+                static display1() {  
+                    return "static method is invoked"  
+                }  
+
+                static display2() {  
+                    return "static method is invoked again"  
+                }  
+
+                show() {
+                    document.writeln(Test.display1()+ " in Show()"+"<br>");
+                }
+            }  
+
+            document.writeln(Test.display1()+"<br>");  
+            document.writeln(Test.display2()+"<br>"); 
+
+            //example to invoke a static method within the constructor. 
+            var t = new Test();
+            t.show();
+        </script>  
+    </body>
+</html>

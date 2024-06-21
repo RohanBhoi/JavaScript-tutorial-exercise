@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <h1> Hello World :) :) </h1>
+    <p> This is an example of getting the difference between two dates using JavaScript. </p>
+
+    <script>
+        var d1 = new Date("08/14/2020");
+        var d2 = new Date("09/14/2020");
+
+        var diff = d2.getTime() - d1.getTime();
+
+        var daydiff = diff / (1000 * 60 * 60 * 24);
+
+        document.write(" Total number of days between <b> " + d1 + " </b> and <b> " + d2 + " </b> is: <b> " + daydiff + " days </b>");   
+    </script>
+</body>
+
+</html>

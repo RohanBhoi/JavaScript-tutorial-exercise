@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <h1 id="heading" ondblclick="fun()"> Hello world :):) </h1>
+    <h2> Double Click the text "Hello world" to see the effect. </h2>
+    <p> This is an example of using the <b> ondblclick </b> attribute. </p>
+
+    <br><br>
+
+    <h1 id="heading1"> Hello world :):) </h1>
+    <h2> Double Click the text "Hello world" to see the effect. </h2>
+    <p> This is an example of creating the double click event using JavaScript. </p>
+
+    <br><br>
+    <h1 id="heading2"> Hello world :):) </h1>
+    <h2> Double Click the text "Hello world" to see the effect. </h2>
+    <p> This is an example of creating the double click event using the <b> addEventListener() method </b>. </p>
+
+    <script>
+        document.getElementById("heading1").ondblclick = function () {
+            fun1()
+        };
+
+        document.getElementById("heading2").addEventListener("dblclick", fun2);
+
+        function fun() {
+            document.getElementById("heading").innerHTML = " Welcome to the javaTpoint.com ";
+        }
+
+        function fun1() {
+            document.getElementById("heading1").innerHTML = " Welcome to the javaTpoint.com ";
+        }  
+
+        function fun2() {
+            document.getElementById("heading2").innerHTML = " Welcome to the javaTpoint.com ";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>  Javascript Events </head>
+    <body onload="window.alert('Page successfully loaded');">
+        <script language="Javascript" type="text/Javascript">
+            <!--
+                function clickevent() {
+                    document.write("This is JavaTpoint");
+                }
+            -->
+
+            <!--
+            function mouseoverevent() {
+                alert("This is JavaTpoint mouseover event");
+            }
+            -->
+
+            <!--
+            function focusevent() {
+                document.getElementById("input1").style.background=" aqua"; 
+            }
+            //-->
+
+            <!--
+            function keydownevent() {
+                document.getElementById("input2");
+                alert("Pressed a key");
+            }
+            //-->
+
+            <!--  
+            document.write("The page is loaded successfully");  
+            //-->  
+        </script>
+
+        <!-- Example of MouseOver Event & Click Event -->
+        <form>
+            <input type="button" onclick="clickevent()" value="who's this?"/>
+
+            <p onmouseover="mouseoverevent()"> Keep curson over me </p>
+        </form>
+
+        <!-- Example of Focus Event & Keydown Event -->
+        <h2> Enter something here </h2>
+        <input type="text" id="input1" onfocus="focusevent()"/>
+        <br> <br>
+        <input type="text" id="input2" onfocus="keydownevent()"/>
+
+        <!-- Example of Focus Event -->
+    </body>
+</html>

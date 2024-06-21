@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>   </head>
+    <body>
+        <h3> This is an example of using onclick attribute in HTML. </h3>  
+        <p> Click the following button to see the effect. </p>  
+        <button onclick="fun()"> click me </button>
+
+        <br> <br>
+
+        <h3> This is an example of using onclick event by Using JavaScript. </h3>  
+        <p> Click the following text to see the effect. </p>  
+        <p id = "para">Click me</p>  
+
+        <br><br>
+
+        <h3> This is an example of using click event by addEventListener() method</h3>  
+        <p> Click the following text to see the effect. </p>  
+        <p id = "para1">Click me</p>  
+        
+        
+        <script>
+            document.getElementById("para").onclick = function() {
+                fun1()
+            };
+
+            var mypara = document.getElementById("para1");
+            mypara.addEventListener("click", fun2);
+
+            function fun() {
+                alert("Welcome to JavaTpoint");
+            }
+
+            function fun1() {
+                document.getElementById("para").innerHTML = "Welcome to the javaTpoint.com";
+                document.getElementById("para").style.color = "orange";
+                document.getElementById("para").style.backgroundColor = "yellow";  
+                document.getElementById("para").style.fontSize = "25px";  
+                document.getElementById("para").style.border = "4px solid";
+            }
+
+            function fun2() {
+                document.getElementById("para1").innerHTML = "Welcome to the javaTpoint.com";  
+                document.getElementsByTagName("body")[0].style.color = "blue";  
+                document.getElementsByTagName("body")[0].style.backgroundColor = "lightgreen";  
+                document.getElementsByTagName("body")[0].style.fontSize = "25px";  
+                para1.style.border = "4px solid red";
+            }
+              
+        </script>
+    </body>
+</html>

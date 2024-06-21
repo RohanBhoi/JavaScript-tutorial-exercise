@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <script>
+            function printValue(){
+                var name = document.form1.name.value;
+                alert("Welcome: " + name);
+            }
+        </script>
+
+        <form name="form1">
+            Enter Name: <input type="text" name="name"/>
+            <input type="button" onclick="printValue()" value="print name"/>
+        </form>
+    </body>
+</html>

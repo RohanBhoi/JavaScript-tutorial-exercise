@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+
+    <script>
+        function fun(a) {
+            
+            function innerfun(b) // the innerfun() is the inner function, or a closure  
+            {
+                return a*b;
+            }
+            return innerfun;
+        }
+        var output = fun(4);
+        document.write(output(3));
+        document.write(" ");
+        document.write(output(6));
+    </script>
+</body>
+
+</html>

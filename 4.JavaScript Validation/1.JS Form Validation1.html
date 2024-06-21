@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <script>
+            function validateform() {
+                var name = document.getElementById("name").value;
+                var pass = document.getElementById("pass").value;
+                var repass = document.getElementById("pass2").value;
+
+                var email =  document.getElementById("email").value;
+                var atposition = email.indexOf("@");
+                var dotposition = email.lastindexOf(".");
+
+
+                if(name==null || name==""){
+                    alert("Name can't be blank");
+                    return false;
+                } else if (atposition<1||dotposition<atposition+2||dotposition+2>=email.length) {
+                    alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                    return false;
+                } else if (pass.length < 6 || name==null || name=="") {
+                    alert("Password must be at least 6 character long.");
+                    return false;
+                }else if(pass == repass || name==null || name=="") {
+                    return true;
+                } else{
+                    alert("Password must be the same.");
+                    return false
+                }
+            }
+        </script>
+        <form name="myForm" method="post" action="abc.jsp" onsubmit="return validateform()">
+            Name:  <input type="text" name="name" id="name"/> <br/><br>
+            Email: <input type="email" name="email" id="email"/> <br> <br>
+            Password: <input type="password" name="password" id="pass"/> <br><br>
+            Re-enter Password: <input type="password" name="password2" id="pass2"/><br><br>
+
+            <input type="submit" value="register"/><br>
+        </form>
+    </body>
+</html>

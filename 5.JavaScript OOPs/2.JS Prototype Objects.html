@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Employee(firstName,lastName) {
+                this.firstName=firstName;
+                this.lastName=lastName;
+            }
+
+            //Example to add a new method to the constructor function.
+            Employee.prototype.fullName=function() {
+                return this.firstName+" "+this.lastName;
+            }
+
+            //Example to add a new property to the constructor function.
+            Employee.prototype.company = "JavaTpoint";
+
+            var employee1=new Employee("Martin","Roy");
+            var employee2=new Employee("Duke", "William");
+
+            document.writeln(employee1.fullName()+"<br>");
+            document.writeln(employee2.fullName()+"<br>");
+
+            document.writeln(employee1.firstName+" "+employee1.lastName+" "+employee1.company+"<br>");  
+            document.writeln(employee2.fullName()+" "+employee2.company+"<br>");
+        </script>
+    </body>
+</html>
+
+ 

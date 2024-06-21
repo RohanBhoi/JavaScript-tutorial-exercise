@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <script>  
+            class Moment extends Date {  
+
+                constructor(year) {  
+                    super(year);
+                }                 
+            }  
+
+            // In this example, we declare sub-class that extends the properties of its parent class
+            class Bike{
+                constructor(){
+                    this.company="Honda";
+                }
+            }
+
+            class Vehicle extends Bike{
+                constructor(name, price){
+                    super();
+                    this.name = name;
+                    this.price = price;
+                }
+
+            }
+
+            var m = new Moment();
+            document.writeln("Current date:");
+            document.writeln(m.getDate() +"-" + (m.getMonth()+1) + "-" + m.getFullYear());
+
+            // example to display the year value from the given date
+            var m1 = new Moment("August 15, 1947 20:22:10");  
+            document.writeln("Year value:")  
+            document.writeln(m1.getFullYear()); 
+
+            // JavaScript extends Example: Custom class
+            var v = new Vehicle("Shine", "700000");
+            document.writeln(v.company + " " + v.name + " " + v.price);  
+        </script>  
+    </body>
+</html>
